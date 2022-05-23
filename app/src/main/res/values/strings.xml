@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="default_user_name">Имя</string>
+    <string name="default_coins_count">10</string>
+    <string name="currency">Аферим</string>
+    <string name="basics">Основы</string>
+    <string name="start_level">Уровень 1</string>
+    <string name="start_lesson">Урок 1</string>
+    <string name="task_type">Отметьте слово</string>
+    <string name="task">"месяц"</string>
+    <string name="get_answer">Ответить</string>
+    <string name="continue_button_text">Продолжить</string>
+    <string name="theory">Теория</string>
+    <string name="statistic">Статистика</string>
+    <string name="friends">Друзья</string>
+    <string name="continue_btn_text">Продолжить</string>
+    <string name="lets_go">Давайте начнём</string>
+</resources>

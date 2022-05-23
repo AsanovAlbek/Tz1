@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.fragment.FourImageFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@color/lime"
+        android:minHeight="?attr/actionBarSize">
+
+        <FrameLayout
+            android:layout_width="370dp"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/avatar"
+                android:src="@drawable/simple_icon"
+                app:civ_border_color="@color/black"
+                app:civ_border_width="2dp"
+                android:layout_marginStart="106dp"/>
+
+            <TextView
+                android:id="@+id/user_name"
+                android:text="@string/default_user_name"
+                android:layout_marginStart="180dp"
+                style="@style/MyCustomTextView"
+                android:layout_gravity="center|start" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:id="@+id/currencyLL"
+                android:orientation="vertical"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="20dp">
+
+                <TextView
+                    style="@style/MyCustomTextView"
+                    android:id="@+id/coins_count"
+                    android:text="@string/default_coins_count"
+                    android:layout_gravity="center|top" />
+
+                <TextView
+                    style="@style/MyCustomTextView"
+                    android:id="@+id/coin_currency"
+                    android:text="@string/currency" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <!-- @drawable/simple_icon - подгруженная с интернета иконка -->
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        style="@style/MyCustomTextView"
+        android:id="@+id/lesson_type"
+        android:text="@string/basics"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="80dp" />
+
+    <TextView
+        style="@style/MyCustomTextView"
+        android:id="@+id/level"
+        android:text="@string/start_level"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        style="@style/MyCustomTextView"
+        android:id="@+id/lesson"
+        android:text="@string/start_lesson"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="100dp"/>
+
+    <TextView
+        style="@style/MyCustomTextView"
+        android:id="@+id/answer_counter"
+        android:text="0/0"
+        android:layout_marginStart="266dp"
+        android:layout_marginTop="100dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/krestik"
+        android:id="@+id/krestik"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="360dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="662dp"
+        android:layout_gravity="center|bottom">
+
+        <FrameLayout
+            android:layout_width="340dp"
+            android:layout_height="420dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="46dp"
+            android:background="@color/dark_gray">
+
+            <TextView
+                android:id="@+id/task_type"
+                style="@style/MyCustomTextView"
+                android:layout_gravity="center|top"
+                android:text="@string/task_type"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/task"
+                style="@style/MyCustomTextView"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="32dp"
+                android:textIsSelectable="true"
+                android:textSize="22sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/four_item_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:layout_marginTop="80dp"
+                tools:listitem="@layout/four_images_item" />
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/check_button"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="20dp"
+            android:text="@string/get_answer" />
+
+    </FrameLayout>
+</FrameLayout>
